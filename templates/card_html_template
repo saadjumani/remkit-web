@@ -1,0 +1,28 @@
+<div class="card">
+      <img src="img_avatar.png" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+
+
+        {{ cards}}
+
+    {{ card1}}
+
+
+
+   card='''<div class="card">
+      <img src="./img/img_avatar.png" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>'''
+
+	crd2=flask.Markup(card)
+
+	crd1=html.unescape(card)
+
+	return render_template('org_dashboard.html', cards=card, card1=crd1, card2=crd2)
